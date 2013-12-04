@@ -29,7 +29,7 @@ import java.io.OutputStream;
 public class ISOBlueCommand {
 
 	public enum OpCode {
-		FILT, WRITE, MESG,
+		FILT, WRITE, GET,
 	}
 
 	private OpCode mOpCode;
@@ -87,6 +87,9 @@ public class ISOBlueCommand {
 
 		case WRITE:
 			s.append("W");
+			break;
+		case GET:
+			s.append("G");
 			break;
 
 		default:
